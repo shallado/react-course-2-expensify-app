@@ -19,10 +19,13 @@
     "build:prod": "webpack --config webpack.prod.js",
     "build:dev": "webpack --config webpack.dev.js",
     "server": "live-server public",
-    "test": "jest"
+		"test": "jest",
+		"start": "node server/server.js",
+		"heroku-postbuild": "npm run build:prod"
   },
   "dependencies": {
     "css-loader": "^3.2.0",
+    "express": "^4.17.1",
     "live-server": "^1.2.1",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
